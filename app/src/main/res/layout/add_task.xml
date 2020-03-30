@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".AddTaskActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Add New Task"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="72dp"
+        android:width="300dp"
+        android:ems="10"
+        android:textColor="@color/colorAccent"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/dueDate"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:width="200dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/dueTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/taskName"
+        app:layout_constraintTop_toBottomOf="@+id/taskName" />
+
+    <EditText
+        android:id="@+id/dueTime"
+        android:layout_width="127dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:width="100dp"
+        android:ems="10"
+        android:textColor="@color/colorAccent"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dueDate" />
+
+    <Button
+        android:id="@+id/AddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueTime"
+        android:onClick="onClick"/>
+
+    <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Task"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+    app:layout_constraintBottom_toTopOf="@+id/taskName"
+    app:layout_constraintEnd_toEndOf="@+id/taskName"
+    app:layout_constraintHorizontal_bias="0.132"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/dueDate"
+        app:layout_constraintEnd_toEndOf="@+id/dueDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dueDate" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="90dp"
+        android:layout_marginRight="90dp"
+        android:text="Due Time"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/dueTime"
+        app:layout_constraintEnd_toEndOf="@+id/dueTime"
+        app:layout_constraintEnd_toStartOf="@+id/dueTime"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toEndOf="@+id/dueTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>
